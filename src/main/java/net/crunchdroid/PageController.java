@@ -46,6 +46,22 @@ public class PageController {
     public String contact(){
         return "contact";
     }
+    @GetMapping("/application_approval")
+    public String application_approval(){
+        return "application_approval";
+    }
+    @GetMapping("/application_viewer")
+    public String application_viewer(){
+        return "application_viewer";
+    }
+    @GetMapping("/home_evaluateur")
+    public String home_evaluateur(){
+        return "home_evaluateur";
+    }
+    @GetMapping("/criteria_list")
+    public String criteria_list(){
+        return "criteria_list";
+    }
 
 
 }
