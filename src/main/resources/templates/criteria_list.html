@@ -2,11 +2,14 @@
 <html lang="en" data-layout-decorate="~{fragments/layout-candidat}">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
-    <title>Accueil</title>
+    <title>Liste des criteres</title>
 </head>
 <body  class="hold-transition skin-blue sidebar-mini">
 
-<div class="content-wrapper" style="height:700px;" data-layout-fragment="candidat">
+
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper" style="height:3000px;" data-layout-fragment="candidat">
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
@@ -19,17 +22,334 @@
         </ol>
     </section>
     <!-- Main content -->
-    <section class="content container-fluid">
-        <div class="row pg-empty-placeholder"></div>
-        <!--------------------------
-| Your Page Content Here |
--------------------------->
+    <section class="content">
+        <div class="row">
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-10 bg-info">
+                <div class="box">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Table des criteres&nbsp;</h3>
+                    </div>
+
+                    <!-- /.box-header -->
+
+                    <div class="box-body">
+                        <table class="table table-bordered">
+                            <thead>
+                            <tr>
+                                <th  class="col-md-1">A</th>
+                                <th class="col-md-4">Activites pedagogiques</th>
+                                <th class="col-md-3">Nombre</th>
+                                <th class="col-md-2">Notation</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1.</td>
+                                <td>Annees d'enseignement en premier cycle</td>
+                                <td>
+                                    01 point/annee </td>
+                                <td>
+                                    <input type="number" placeholder="la note">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2.</td>
+                                <td>Annee d'enseignement en graduation</td>
+                                <td>
+                                    01 point/annee </td>
+                                <td>
+                                    <input type="number" placeholder="la note">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3.</td>
+                                <td>Annee d'enseignement en seconde cycle (master)</td>
+                                <td>
+                                    01 point/annee </td>
+                                <td>
+                                    <input type="number" placeholder="la note">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4.</td>
+                                <td>Annee d'enseignement en post graduation</td>
+                                <td>
+                                    01 point/annee </td>
+                                <td>
+                                    <input type="number" placeholder="la note">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5.</td>
+                                <td>Ouvrages pedagogique edites </td>
+                                <td>
+                                    02.5 point/ouv </td>
+                                <td>
+                                    <input type="number" placeholder="la note">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>6.</td>
+                                <td>Manuel pedagogique edites </td>
+                                <td>
+                                    02.5 point/ouv </td>
+                                <td>
+                                    <input type="number" placeholder="la note">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>7.</td>
+                                <td>Polycopies edites </td>
+                                <td>
+                                    02.5 point/ouv (+ 100 pages) </td>
+                                <td>
+                                    <input type="number" placeholder="la note">
+                                </td>
+                            </tr>
+                            </tbody>
+                            <thead>
+                            <tr>
+                                <th style="width: 10px">B</th>
+                                <th>Encadrement</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1.</td>
+                                <td>Memoire de fin d'etudes de masters encadres et soutenus </td>
+                                <td>
+                                    02points/mem/2premiers. 01point/3eme/mem </td>
+                                <td>
+                                    <input type="number" placeholder="la note">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2.</td>
+                                <td>Memoire de magister diriges et soutenus</td>
+                                <td>
+                                    02points/mem/2premiers. 01point/3eme/mem</td>
+                                <td>
+                                    <input type="number" placeholder="la note">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3.</td>
+                                <td>These de doctorat ou du doctorat d'etat diriges et soutenus</td>
+                                <td>
+                                    06points/1er these. 04points/2eme these. 03points/3eme these </td>
+                                <td>
+                                    <input type="number" placeholder="la note">
+                                </td>
+                            </tr>
+                            </tbody>
+                            <thead>
+                            <tr>
+                                <th style="width: 10px">C</th>
+                                <th>Production et activites scientifiques </th>
+                                <th></th>
+                                <th style="width: 40px"></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1.</td>
+                                <td>Publications internationales
+                                    <li>
+                                        Revues periodiques
+                                    </li>
+                                    <li>
+                                        Ouvrages edites
+                                    </li>
+                                    <li>
+                                        Actes et proceding edites
+                                    </li>
+                                </td>
+                                <td>
+                                    <li>
+                                        05 points/art
+                                    </li>
+                                    <li>
+                                        05 points/ouv
+                                    </li>
+                                    <li>
+                                        04 points/ape
+                                    </li>
+                                </td>
+                                <td>
+                                    <input type="number" placeholder="la note">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2.</td>
+                                <td>Publications nationales
+                                    <li>
+                                        Revues periodiques
+                                    </li>
+                                    <li>
+                                        Ouvrages edites
+                                    </li>
+                                    <li>
+                                        Actes et proceding edites
+                                    </li>
+                                </td>
+                                <td>
+                                    <li>
+                                        04 points/art
+                                    </li>
+                                    <li>
+                                        03 points/ouv
+                                    </li>
+                                    <li>
+                                        03 points/ape
+                                    </li>
+                                </td>
+                                <td>
+                                    <input type="number" placeholder="la note">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3.</td>
+                                <td>Communications
+                                    <li>
+                                        Internationales
+                                    </li>
+                                    <li>
+                                        Nationales
+                                    </li>
+                                </td>
+                                <td>
+                                    <li>
+                                        02 points/com
+                                    </li>
+                                    <li>
+                                        01 point/com
+                                    </li>
+                                </td>
+                                <td>
+                                    <input type="number" placeholder="la note">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3.</td>
+                                <td>Responsable ou memebre d'un projet de rechereche    </td>
+                                <td>
+                                    <li>
+                                        04 points/CL
+                                    </li>
+                                    <li>
+                                        03 points/CE
+                                    </li>
+                                    <li>
+                                        02 points/ME
+                                    </li>
+                                </td>
+                                <td>
+                                    <input type="number" placeholder="la note">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4.</td>
+                                <td>Animation scientifiques
+                                    <li>
+                                        Organisation de colloque, expertise, member de comite de lecture, ..
+                                    </li>
+                                </td>
+                                <td>
+                                    03 points </td>
+                                <td>
+                                    <input type="number" placeholder="la note">
+                                </td>
+                            </tr>
+                            </tbody>
+                            <thead>
+                            <tr>
+                                <th style="width: 10px">D</th>
+                                <th>Responsabilites administratives  </th>
+                                <th></th>
+                                <th style="width: 40px"></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1.</td>
+                                <td>Responsabilites administratives </td>
+                                <td>
+                                    03 points </td>
+                                <td>
+                                    <input type="number" placeholder="la note">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2.</td>
+                                <td>Presidence d'organes d'evaluation pedagogique et scientifique
+                                    <li>Conseil scientifique ou comite scientifique </li>
+                                </td>
+                                <td>
+                                    02 points </td>
+                                <td>
+                                    <input type="number" placeholder="la note">
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                        <button class="col-sm-12 btn-lg btn-info">
+                            Calculer la somme
+                        </button>
+                    </div>
+
+                    <!-- /.box-body -->
+                </div>
+                <!-- /.box -->
+                <!-- /.box -->
+            </div>
+            <!-- /.col -->
+            <!-- /.col -->
+            <div class="col-md-1">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-10 bg-info">
+                <div class="box">
+                    <table class="table table-bordered">
+                        <tbody>
+                        <tr>
+                            <th  class="col-md-3">Nombre de points obtenus </th>
+                            <th  class="col-md-3">Avis de la section</th>
+                            <th  class="col-md-4">Observation</th>
+                        </tr>
+                        <tr>
+                            <td>65</td>
+                            <td>
+                                <textarea cols="25" placeholder="Avis..."></textarea>
+                            </td>
+                            <td>
+                                <textarea class="col-md-12" cols="25" placeholder="Observation..."></textarea>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <button class="col-sm-12 btn-lg btn-success">
+                    Submit
+                </button>
+            </div>
+            <div class="col--md1">
+            </div>
+        </div>
+        <!-- /.row -->
+        <div class="row">
+        </div>
     </section>
     <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
-
-
 
 </body>
 </html>
