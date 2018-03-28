@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>AdminLTE 2 | Registration Page</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <!-- Bootstrap 3.3.7 -->
-    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" th:href="@{/bower_components/bootstrap/dist/css/bootstrap.min.css}" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css" >
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" th:href="@{/bower_components/font-awesome/css/font-awesome.min.css}" href="../../bower_components/font-awesome/css/font-awesome.min.css" >
     <!-- Ionicons -->
-    <link rel="stylesheet" href="/bower_components/Ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" th:href="@{/bower_components/Ionicons/css/ionicons.min.css}" href="../../bower_components/Ionicons/css/ionicons.min.css">
+
     <!-- Theme style -->
-    <link rel="stylesheet" href="/dist/css/AdminLTE.min.css">
+    <link rel="stylesheet" th:href="@{/dist/css/AdminLTE.min.css}" href="../../dist/css/AdminLTE.min.css" >
     <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
@@ -22,27 +22,43 @@
     <div class="register-logo">
         <a href="#"><b>Mesr</b>NSR</a>
     </div>
+    <div class="alert alert-info" th:if="${successMessage}" th:utext="${successMessage}"></div>
 
     <div class="register-box-body">
         <p class="login-box-msg">Créer un nouveau compte</p>
 
-        <form action="#" method="post">
+        <form action="#" method="post" th:action="@{/register}" th:object="${user}" >
             <div class="form-group has-feedback">
-                <input type="text" class="form-control" placeholder="Nom d'utilisateur">
+                <div th:if="${#fields.hasErrors('username')}" th:errors="*{username}"
+                     class="alert alert-danger"></div>
+                <input type="text" class="form-control" th:field="*{username}" placeholder="Nom d'utilisateur">
                 <span class="glyphicon glyphicon-user form-control-feedback"></span>
             </div>
             <div class="form-group has-feedback">
-                <input type="email" class="form-control" placeholder="Email">
+                <label th:if="${#fields.hasErrors('name')}" th:errors="*{name}"
+                       class="alert alert-danger"></label>
+                <input type="text" th:field="*{name}" class="form-control" placeholder="Nom ">
+                <span class="glyphicon glyphicon-user form-control-feedback"></span>
+            </div>
+            <div class="form-group has-feedback">
+                <label th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"
+                       class="alert alert-danger"></label>
+                <input type="text" class="form-control" th:field="*{lastName}" placeholder="Prénom">
+                <span class="glyphicon glyphicon-user form-control-feedback"></span>
+            </div>
+            <div class="form-group has-feedback">
+                <label th:if="${#fields.hasErrors('email')}" th:errors="*{email}"
+                       class="alert alert-danger"></label>
+                <input type="email" class="form-control" th:field="*{email}" placeholder="Email">
                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
             </div>
             <div class="form-group has-feedback">
-                <input type="password" class="form-control" placeholder="Mot de passe">
+                <label th:if="${#fields.hasErrors('password')}" th:errors="*{password}"
+                       class="alert alert-danger"></label>
+                <input type="password" class="form-control" th:field="*{password}" placeholder="Mot de passe">
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
             </div>
-            <div class="form-group has-feedback">
-                <input type="password" class="form-control" placeholder="retaper le mot de passe">
-                <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
-            </div>
+
             <div class="row">
 
                 <!-- /.col -->
